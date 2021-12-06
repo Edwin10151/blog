@@ -16,11 +16,13 @@ class ImageWrapper extends StatelessWidget {
     double width = MediaQuery.of(context).size.width / 2;
     return Container(
       margin: EdgeInsets.symmetric(vertical: 24),
-      child: Image.asset(
-        image,
+      child:
+      FadeInImage.assetNetwork(
         width: width,
         height: width / 1.618,
         fit: BoxFit.cover,
+        image: image,
+        placeholder: image,
       ),
     );
   }
@@ -264,7 +266,7 @@ class ListItem extends StatelessWidget {
             ),
           ),
         Align(
-          alignment: Alignment.centerLeft,
+          alignment: Alignment.centerLeft, 
           child: Container(
             margin: marginBottom12,
             child: Text(
@@ -336,16 +338,6 @@ class MenuBar extends StatelessWidget {
                             ModalRoute.withName(Navigator.defaultRouteName)),
                         child: Text(
                           "HOME",
-                          style: buttonTextStyle,
-                        ),
-                        style: ButtonStyle(
-                            overlayColor:
-                                MaterialStateProperty.all(Colors.transparent)),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "PORTFOLIO",
                           style: buttonTextStyle,
                         ),
                         style: ButtonStyle(

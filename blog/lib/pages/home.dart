@@ -21,7 +21,8 @@ class ListPage extends StatelessWidget {
                   MenuBar(),
                   ListItem(
                       imageUrl:
-                          "assets/images/paper_flower_overhead_bw_w1080.jpg",
+                          // "assets/images/paper_flower_overhead_bw_w1080.jpg",
+                          "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_960_720.jpg",
                       title: listItemTitleText,
                       description: listItemPreviewText),
                   divider,

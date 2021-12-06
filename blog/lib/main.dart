@@ -1,4 +1,5 @@
 import 'package:animations/animations.dart';
+import 'package:blog/pages/edit_blog.dart';
 import 'package:flutter/material.dart';
 import 'package:blog/pages/pages.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -34,8 +35,10 @@ class MyApp extends StatelessWidget {
               return PostPage();
             case Routes.style:
               return TypographyPage();
+            case Routes.editor:
+              return HtmlEditorExampleApp();
             default:
-              return SizedBox.shrink();
+              return const SizedBox.shrink();
           }
         });
       },
@@ -48,6 +51,7 @@ class Routes {
   static const String home = "/";
   static const String post = "post";
   static const String style = "style";
+  static const String editor = "editor";
 
   static Route<T> fadeThrough<T>(RouteSettings settings, WidgetBuilder page,
       {int duration = 300}) {
@@ -61,4 +65,3 @@ class Routes {
     );
   }
 }
-

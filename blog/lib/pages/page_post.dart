@@ -12,7 +12,7 @@ class PostPage extends StatelessWidget {
             children: <Widget>[
               MenuBar(),
               ImageWrapper(
-                image: "assets/images/mugs_side_bw_w1080.jpg",
+                image: "https://images3.alphacoders.com/823/thumb-1920-82317.jpg",
               ),
               TextHeadline(
                 text: "A BETTER BLOG FOR WRITING",
